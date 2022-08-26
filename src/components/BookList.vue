@@ -3,9 +3,9 @@
     <h1>{{title}}</h1>
     <ul>
       <book-item v-for='book in books' :key='book.id' :book='book'></book-item>
-      <span v-if='book.finishedReading=true'> Read</span>
-      <span v-else>Not Read</span>
     </ul>
+    <span v-if='book.finishedReading=true'> Read</span>
+    <span v-else>Not Read</span>
     <br><hr>
     <book-form @addBook='appendBook'></book-form>
   </div>
