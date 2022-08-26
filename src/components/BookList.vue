@@ -2,10 +2,11 @@
   <div>
     <h1>{{title}}</h1>
     <ul>
-      <book-item v-for='book in books' :key='book.id' :book='book'></book-item>
-    </ul>
-    <span v-if='book.finishedReading=true'> Read</span>
-    <span v-else>Not Read</span>
+      <book-item v-for='book in books' :key='book.id' :book='book'>
+        <span>Read</span>
+        <span>Not Read</span>
+      </book-item>
+    </ul>        
     <br><hr>
     <book-form @addBook='appendBook'></book-form>
   </div>
